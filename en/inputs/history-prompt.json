@@ -1,0 +1,20 @@
+{
+  "prompt": [
+    {
+      "role": "user",
+      "content": [{"text": "Hello"}]
+    },
+    {
+      "role": "assistant",
+      "content": [{"text": "Hello! How can I help you today?"}]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "Create /tmp/strands-tool-use-validation-demo.txt with the text \"Created at the user's request.\""
+        }
+      ]
+    }
+  ]
+}

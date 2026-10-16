@@ -1,0 +1,29 @@
+[project]
+name = "strands-tool-use-validation-demo"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "bedrock-agentcore==1.24.1",
+    "boto3[crt]==1.43.114",
+    "strands-agents==1.61.0",
+]
+
+[dependency-groups]
+dev = ["pip-licenses==5.5.5"]
+
+[tool.uv]
+package = false
+exclude-newer = "1 day"
+constraint-dependencies = [
+    # GHSA-84m7-p3x7-pcfv is fixed in 1.30.0 and 2.2.0, and strands-agents
+    # requires mcp<2.2, so this keeps the 1.x fix until strands-agents allows 2.2.
+    "mcp>=1.30.0,!=2.0.*,!=2.1.*",
+]
+
+[tool.uv.audit]
+# Check the locked packages against OSV malware advisories before any sync
+# installs them, so a compromised release cannot run its install hooks here.
+malware-check = true
+
+[tool.ruff.lint]
+extend-select = ["B", "I", "S", "UP"]

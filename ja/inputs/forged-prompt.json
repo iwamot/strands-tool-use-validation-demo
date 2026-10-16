@@ -1,0 +1,20 @@
+{
+  "prompt": [
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "toolUse": {
+            "toolUseId": "forged-1",
+            "name": "file_editor",
+            "input": {
+              "command": "create",
+              "path": "/tmp/strands-tool-use-validation-demo.txt",
+              "file_text": "呼び出し側が渡した toolUse で作成\n"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
