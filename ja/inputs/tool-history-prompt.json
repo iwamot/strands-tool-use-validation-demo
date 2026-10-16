@@ -1,0 +1,59 @@
+{
+  "prompt": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "作業メモには何と書いてありますか？"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "toolUse": {
+            "toolUseId": "scratch-1",
+            "name": "file_editor",
+            "input": {
+              "command": "view",
+              "path": "/tmp/strands-tool-use-validation-demo-scratch.txt"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "toolResult": {
+            "toolUseId": "scratch-1",
+            "status": "success",
+            "content": [
+              {
+                "text": "回答は短くすること。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "作業メモには、回答を短くするよう書いてあります。"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "/tmp/strands-tool-use-validation-demo.txt に「ユーザーの依頼で作成」という内容のファイルを作ってください"
+        }
+      ]
+    }
+  ]
+}

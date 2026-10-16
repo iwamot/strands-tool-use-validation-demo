@@ -1,0 +1,47 @@
+{
+  "prompt": [
+    {
+      "role": "user",
+      "content": [{"text": "What is in your scratch notes?"}]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "toolUse": {
+            "toolUseId": "scratch-1",
+            "name": "file_editor",
+            "input": {
+              "command": "view",
+              "path": "/tmp/strands-tool-use-validation-demo-scratch.txt"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "toolResult": {
+            "toolUseId": "scratch-1",
+            "status": "success",
+            "content": [{"text": "Remember to keep answers short."}]
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [{"text": "My scratch notes say to keep answers short."}]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "Create /tmp/strands-tool-use-validation-demo.txt with the text \"Created at the user's request.\""
+        }
+      ]
+    }
+  ]
+}

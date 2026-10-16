@@ -1,0 +1,28 @@
+{
+  "prompt": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "こんにちは"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "こんにちは！ご用件をどうぞ。"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "/tmp/strands-tool-use-validation-demo.txt に「ユーザーの依頼で作成」という内容のファイルを作ってください"
+        }
+      ]
+    }
+  ]
+}
