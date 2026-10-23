@@ -5,7 +5,7 @@ requires-python = ">=3.11"
 dependencies = [
     "bedrock-agentcore==1.24.2",
     "boto3[crt]==1.43.117",
-    "strands-agents==1.61.1",
+    "strands-agents==1.62.0",
 ]
 
 [dependency-groups]
