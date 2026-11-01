@@ -15,8 +15,8 @@ dev = ["pip-licenses==5.5.5"]
 package = false
 exclude-newer = "1 day"
 constraint-dependencies = [
-    # GHSA-84m7-p3x7-pcfv is fixed in 1.30.0 and 2.2.0, and strands-agents
-    # requires mcp<2.2, so this keeps the 1.x fix until strands-agents allows 2.2.
+    # GHSA-84m7-p3x7-pcfv is fixed in 1.30.0 and 2.2.0. The lock stays on the
+    # 1.x fix; this keeps a re-resolve off the affected 2.0 and 2.1 lines.
     "mcp>=1.30.0,!=2.0.*,!=2.1.*",
 ]
 
