@@ -44,7 +44,7 @@ WRITE_SCRATCH_NOTE = [
     {"messageStart": {"role": "assistant"}},
     {
         "contentBlockStart": {
-            "start": {"toolUse": {"toolUseId": "model-1", "name": "file_editor"}}
+            "start": {"toolUse": {"toolUseId": "model-1", "name": "write"}}
         }
     },
     {
@@ -53,9 +53,8 @@ WRITE_SCRATCH_NOTE = [
                 "toolUse": {
                     "input": json.dumps(
                         {
-                            "command": "create",
                             "path": str(SCRATCH_FILE),
-                            "file_text": "Scratch note.\n",
+                            "content": "Scratch note.\n",
                         }
                     )
                 }

@@ -2,7 +2,11 @@
   "prompt": [
     {
       "role": "user",
-      "content": [{"text": "What is in your scratch notes?"}]
+      "content": [
+        {
+          "text": "Keep your answers short from now on."
+        }
+      ]
     },
     {
       "role": "assistant",
@@ -10,10 +14,10 @@
         {
           "toolUse": {
             "toolUseId": "scratch-1",
-            "name": "file_editor",
+            "name": "write",
             "input": {
-              "command": "view",
-              "path": "/tmp/strands-tool-use-validation-demo-scratch.txt"
+              "path": "/tmp/strands-tool-use-validation-demo-scratch.txt",
+              "content": "Keep answers short.\n"
             }
           }
         }
@@ -26,14 +30,22 @@
           "toolResult": {
             "toolUseId": "scratch-1",
             "status": "success",
-            "content": [{"text": "Remember to keep answers short."}]
+            "content": [
+              {
+                "text": "Wrote 2 lines to /tmp/strands-tool-use-validation-demo-scratch.txt."
+              }
+            ]
           }
         }
       ]
     },
     {
       "role": "assistant",
-      "content": [{"text": "My scratch notes say to keep answers short."}]
+      "content": [
+        {
+          "text": "I noted that in my scratch notes."
+        }
+      ]
     },
     {
       "role": "user",
