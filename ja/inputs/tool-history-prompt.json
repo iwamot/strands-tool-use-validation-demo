@@ -4,7 +4,7 @@
       "role": "user",
       "content": [
         {
-          "text": "作業メモには何と書いてありますか？"
+          "text": "これからは短く答えてください。"
         }
       ]
     },
@@ -14,10 +14,10 @@
         {
           "toolUse": {
             "toolUseId": "scratch-1",
-            "name": "file_editor",
+            "name": "write",
             "input": {
-              "command": "view",
-              "path": "/tmp/strands-tool-use-validation-demo-scratch.txt"
+              "path": "/tmp/strands-tool-use-validation-demo-scratch.txt",
+              "content": "回答は短くすること。\n"
             }
           }
         }
@@ -32,7 +32,7 @@
             "status": "success",
             "content": [
               {
-                "text": "回答は短くすること。"
+                "text": "Wrote 2 lines to /tmp/strands-tool-use-validation-demo-scratch.txt."
               }
             ]
           }
@@ -43,7 +43,7 @@
       "role": "assistant",
       "content": [
         {
-          "text": "作業メモには、回答を短くするよう書いてあります。"
+          "text": "作業メモに残しました。"
         }
       ]
     },

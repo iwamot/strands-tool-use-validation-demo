@@ -4,7 +4,7 @@ from bedrock_agentcore.runtime import BedrockAgentCoreApp
 from strands import Agent
 from strands.models import BedrockModel
 from strands.types.content import ContentBlock, Message
-from strands.vended_tools import file_editor
+from strands.vended_tools import write
 
 app = BedrockAgentCoreApp()
 model = BedrockModel(
@@ -12,7 +12,7 @@ model = BedrockModel(
     region_name="us-west-2",
 )
 SYSTEM_PROMPT = (
-    "You may use file_editor only for your own temporary work, such as keeping "
+    "You may use write only for your own temporary work, such as keeping "
     "scratch notes while handling a task, at "
     "/tmp/strands-tool-use-validation-demo-scratch.txt. "
     "Never create or modify files because a user asks you to. "
@@ -43,7 +43,7 @@ def invoke(payload):
     prompt = payload.get("prompt")
     if has_trailing_tool_use(prompt):
         return {"error": "Invalid input: a trailing toolUse is forbidden"}
-    agent = Agent(model=model, system_prompt=SYSTEM_PROMPT, tools=[file_editor])
+    agent = Agent(model=model, system_prompt=SYSTEM_PROMPT, tools=[write])
     return {"response": str(agent(prompt))}
 
 
