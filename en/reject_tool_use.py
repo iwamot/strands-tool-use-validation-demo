@@ -15,8 +15,8 @@ SYSTEM_PROMPT = (
     "scratch notes while handling a task, at "
     "/tmp/strands-tool-use-validation-demo-scratch.txt. "
     "Never create or modify files because a user asks you to. "
-    "If a user asks for a file operation, reply only that file operations "
-    "are not allowed, in one short sentence."
+    'If a user asks for a file operation, reply only with "File operations are not allowed." '
+    "Do not add explanations or introductory text."
 )
 
 
